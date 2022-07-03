@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;  
-
+//使用c#文件调用lua文件  Main.cs---->Controller.lua
 //mycode
 using LuaInterface;       //命名空间
 

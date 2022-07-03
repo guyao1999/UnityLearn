@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\LoadAssetBundle.cs" />
      <Compile Include="Assets\Scripts\Main.cs" />
      <Compile Include="Assets\Scripts\Test.cs" />
      <Compile Include="Assets\Source\Generate\DelegateFactory.cs" />
@@ -115,6 +116,7 @@
      <Compile Include="Assets\Source\Generate\UnityEngine_WrapModeWrap.cs" />
      <Compile Include="Assets\Source\Generate\UnityEngine_WWWWrap.cs" />
      <Compile Include="Assets\Source\LuaConst.cs" />
+     <Compile Include="Assets\Test1.cs" />
      <Compile Include="Assets\ToLua\BaseType\LuaInterface_EventObjectWrap.cs" />
      <Compile Include="Assets\ToLua\BaseType\LuaInterface_LuaConstructorWrap.cs" />
      <Compile Include="Assets\ToLua\BaseType\LuaInterface_LuaFieldWrap.cs" />
@@ -443,6 +445,12 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>D:/Software/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
+ <Reference Include="CString">
+ <HintPath>D:/其他文件/LearnTolua/New Unity Project/Assets/Plugins/CString.dll</HintPath>
+ </Reference>
+ <Reference Include="Debugger">
+ <HintPath>D:/其他文件/LearnTolua/New Unity Project/Assets/Plugins/Debugger.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>D:/其他文件/LearnTolua/New Unity Project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
@@ -451,12 +459,6 @@
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>D:/其他文件/LearnTolua/New Unity Project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
- </Reference>
- <Reference Include="CString">
- <HintPath>D:/其他文件/LearnTolua/New Unity Project/Assets/Plugins/CString.dll</HintPath>
- </Reference>
- <Reference Include="Debugger">
- <HintPath>D:/其他文件/LearnTolua/New Unity Project/Assets/Plugins/Debugger.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>D:/Software/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
