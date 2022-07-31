@@ -22,6 +22,7 @@ public class LoadAssetBundle : MonoBehaviour
             bundle.Unload(true);  //true把加载来的所有资源都卸载   false表示只卸载用过的资源
         }
         www.Dispose();   //进行资源的释放
+        
     }
 
     // Update is called once per frame

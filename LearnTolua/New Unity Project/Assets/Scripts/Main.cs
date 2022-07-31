@@ -17,7 +17,7 @@ public class Main : MonoBehaviour
         lua = new LuaState();       //初始化lua虚拟机
         lua.Start();                //开启虚拟机
         LuaBinder.Bind(lua);        //向lua虚拟机注册work类
-        //ua.DoFile("Testlua.lua");   //打开lua脚本
+        //lua.DoFile("Testlua.lua");   //打开lua脚本
         lua.DoFile("Controller.lua");   //打开lua脚本
 
         CallFunc("Controller.Start");
