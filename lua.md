@@ -57,7 +57,7 @@
 > > 3. ```lua 
 > >    -------使用""来表示字符串
 > >    -------使用[[]]来表示一块字符串
-> >                                  
+> >                                     
 > >    html = [[
 > >    <html>
 > >    <head></head>
@@ -67,7 +67,7 @@
 > >    </html>
 > >    ]]
 > >    print(html)
-> >                                  
+> >                                     
 > >    --------------------------------输出-------------------------------------
 > >    <head></head>
 > >    <body>
@@ -1392,6 +1392,58 @@
 > > 
 > > 
 > > ```
+
+#### class类的实现
+
+>```lua
+>-- 声明一个 lua class
+>-- className 是类名
+>-- super 为父类
+>local function class(className, super)
+>-- 构建类
+>local clazz = { __cname = className, super = super }
+>if super then
+>   -- 设置类的元表，此类中没有的，可以查找父类是否含有
+>   setmetatable(clazz, { __index = super })   --将父类设置为自己的元表
+>end
+>-- new 方法创建类对象
+>clazz.new = function(...)
+>   -- 构造一个对象
+>   local instance = {}
+>   -- 设置对象的元表为当前类，这样，对象就可以调用当前类生命的方法了
+>   setmetatable(instance, { __index = clazz })
+>   if clazz.ctor then
+>       clazz.ctor(instance, ...)
+>   end
+>   return instance
+>end
+>return clazz
+>end
+>--------------------------------------------------------------------------------------
+>--构造feitan类，feitan类继承于people类
+>Feitan=class(feitan,people) --经过class函数之后 Feitan有了clazz的所有参数
+>----
+>--结果Feitan=clazz
+>clazz={_cname="feitan",super=super}
+>clazz.__index=super
+>clazz.new() = function
+>
+>a=Feitan.new()
+>-----结果
+>a=instance
+>instance={}
+>instance.__index=clazz
+>instance.new()
+>--
+>--访问a.h属性是，instance中本身没有，访问clazz.h属性。
+>--所以实现了访问a.h时访问的是Feitan这个类中定义的属性
+>--如果instance中没有这个属性，就访问instance.__index即clazz这个属性，但是clazz中本身没有，所以访问的是clazz.__index即super这个参数的属性。所
+>--以访问到了super类中的属性，
+>--总结：如果子类中有这个属性就访问子类中的这个属性，如果子类中没有这个属性，那么访问的就是基类中的这个属性。
+>--如果子类中没有这个属性，基类中有这个属性。从子类访问这个属性的话，访问的就是基类的属性
+>--如果子类中没有这个属性，基类中有这个属性。从基类访问这个属性的话，访问的还是基类的属性
+>```
+>
 
 #### loadfile require  import 
 
