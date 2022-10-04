@@ -185,9 +185,9 @@
 >     lua.RegisterFunction("StaticMethod",null,typeof(ClassName)GetMethod("NormalMethod"))
 >     //StaticMethod   表示注册到lua中之后叫什么方法
 >     //typeof(ClassName)GetMethod("NormalMethod")哪个类中的哪个静态方法 
->               
+>                 
 >     //静态方法属于一个对象，所以第二个参数可以不要
->             
+>               
 >   */
 >   using System;
 >   using LuaInterface;
@@ -196,11 +196,11 @@
 >        static void Main()
 >        {
 >           Lua lua= new Lua(); //创建一个lua解释器
->                      
+>                        
 >           lua.RegisterFunction("LuaMethod"，null，typeof(Program).GetMethod("CLRMethod"));
->                      
+>                        
 >            lua.DoString("LuaMethod");
->             
+>               
 >        }
 >       
 >      
