@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 4253188922
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e41eefdcb3dcc9fcfd8682f6efcd3e10
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 89ca4778a155abfce6fed8c83b443170
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: ce16b62f8cc08744cb51cf1be494378b, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/BundledAssets/testbundle/BundledSpriteObject.prefab
+- Assets/BundledAssets/testbundle/Loader.prefab
+Dependencies: []
