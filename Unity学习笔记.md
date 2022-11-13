@@ -2,6 +2,10 @@
 
 [TOC]
 
+#### Transform类
+
+> 1. transform.DOScale()，这个函数是在引入命名空间DG.Tweening之后才有的方法，属于DG.Tweening的方法。
+
 #### 基础界面知识
 
 > 1. project界面和Asset and Packages文件夹对应----游戏资源界面
